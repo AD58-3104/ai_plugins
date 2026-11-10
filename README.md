@@ -9,6 +9,7 @@ git clone <this-repo> ~/ai_plugins
 mkdir -p ~/.claude/hooks
 cp ~/ai_plugins/settings.json ~/ai_plugins/CLAUDE.md ~/.claude/
 cp ~/ai_plugins/hooks/* ~/.claude/hooks/
+cp -r ~/ai_plugins/skills ~/.claude/
 ```
 
 Claude Code を起動すると `extraKnownMarketplaces` / `enabledPlugins` に従ってプラグインが自動インストールされる。
@@ -19,4 +20,5 @@ Claude Code を起動すると `extraKnownMarketplaces` / `enabledPlugins` に�
 sed "s|/home/$USER/.claude/hooks/|\$HOME/.claude/hooks/|" ~/.claude/settings.json > ~/ai_plugins/settings.json
 cp ~/.claude/CLAUDE.md ~/ai_plugins/
 cp ~/.claude/hooks/* ~/ai_plugins/hooks/
+herdr --skill > ~/ai_plugins/skills/herdr/SKILL.md
 ```
